@@ -28,6 +28,13 @@ unpkg.com/:package@:version/:file
   
     <!-- Load our React component. -->
     <script defer type="text/babel">
+        const style = {
+            fontFamily: 'arial',
+            color: 'green',
+            fontSize: '10em'
+        };
+
+        const mit = <a href="http://www.mit.edu" style={style}>MIT</a>
 
       ReactDOM.render(
         <h1>Hello World!</h1>,
