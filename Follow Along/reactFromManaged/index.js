@@ -1,25 +1,33 @@
 function SignUp() {
-    const [year, setYear ] =  react.useState('');
+    const [year, setYear ] =  React.useState('Freshman');
+    const [name, setName ] =  React.useState('');
+    const [email, setEmail ] =  React.useState('');
+    const [password, setPassword ] =  React.useState('');
+    const [remember, setRemember ] =  React.useState('');
 
     function handle(){
-        console.log(document.getElementById('year').value);
+        console.log('Year:', year);
+        console.log('Name:', name);
+        console.log('Email:', email);
+        console.log('Password:', password);
+        console.log('Remembered:', remember);
     }
     return (
         <>
-        <select id="year">
+        <select value={year} onChange={e => setYear(e.target.value)}>
             <option>Freshman</option>
             <option>Sophmore</option>
             <option>Junior</option>
             <option>Senior</option>
         </select>
         <div>Name</div>
-        <input type="text"/>
+        <input value={name} onChange={e => setName(e.target.value)}/>
         <div>Email</div>
-        <input type="text"/>
+        <input value={email} onChange={e => setEmail(e.target.value)}/>
         <div>Password</div>
-        <input type="text"/>
-        <div><input type="checkbox"/>Remember me</div>
-        <button onCLick={handle}>Submit</button>
+        <input value={password} onChange={e => setPassword(e.target.value)}/>
+        <div><input type="checkbox" value={remember} onChange={e => setRemember(e.target.checked)}/>Remember me</div>
+        <button onClick={handle}>Submit</button>
         </>
     )
 }
