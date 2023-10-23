@@ -2,9 +2,11 @@
 
 function ManagedForm() {
   /* 1. Your React.useState code goes here */
-
+    const [name, setName] = React.useState('')
   /* 2. Update this function */
-  function updateName() {}
+  function updateName(event) {
+    setName(event.target.value)
+  }
 
   function handleSubmit(event) {
     alert('A name was submitted: ' + name);
@@ -15,7 +17,7 @@ function ManagedForm() {
     <>
       <form onSubmit={handleSubmit}>
         <label>Name: </label>
-        <input type="text" value={name} onChange={/* 3. Your code goes here */} />
+        <input type="text" value={name} onChange={(event) => updateName(event)} />
         <button>Submit</button>
       </form>
       <p>My name is {name}</p>
