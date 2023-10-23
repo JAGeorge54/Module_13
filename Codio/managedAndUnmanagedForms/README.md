@@ -65,3 +65,10 @@ Complete the following tasks:
 Create name and setName using React.useState and initialize with an empty string
 On the form’s input element, update the onChange to call the updateName function with the event as the argument
 Add code to the updateName function to capture the user input and set the state of name
+
+Activity Part 2 - Create an unmanaged form
+You will be working in the UnmanagedForm.jsx file for this part of the activity.
+Complete the following tasks:
+Add an id="name" to the input element
+Have the form call the submitForm function on submit
+Set the innerHTML of the element with the id name-span to the value of the input element
