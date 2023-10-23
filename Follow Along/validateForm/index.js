@@ -1,9 +1,9 @@
 function SignUp(){
     const [values, handleChange] = useForm({year:'',name:'',email:'',password:'',checkbox:false});
+    
     function handle(){
         console.log('values:',values);
     }
-    console.log('hello');
 
     return (
         <>
