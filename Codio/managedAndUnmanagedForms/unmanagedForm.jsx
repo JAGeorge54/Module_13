@@ -2,14 +2,15 @@
 
 function UnmanagedForm() {
   function submitForm(event) {
-    /* 3. You code goes here */
+   let name = document.getElementById("name").value;
+   document.getElementById("name-span").innerHTML = name;
     event.preventDefault();
   }
   return (
     <>
-      <form onSubmit={/* 2. Your code goes here */}>
+      <form onSubmit={UnmanagedForm}>
         <label>Name: </label>
-        <input type="text" /* 1. Your code goes here */ />
+        <input type="text" id="name"/>
         <button>Submit</button>
       </form>
       <p>
